@@ -23,8 +23,9 @@ SCC <- readRDS("Source_Classification_Code.rds")
 
 Baltimore <- filter(NEI, fips == "24510")
 
-## Using dplyr capabilities, we will sum all values of Emissions per year and
-## store them on a new variable, table data frame called Total_Emissions
+## Using dplyr capabilities, we will sum all values of Emissions of Baltimore 
+## per type and year. We will store them on a new variable, table data frame 
+## called Baltimore.SubTotals
 
 Baltimore.SubTotals <- Baltimore %>% group_by(type, year)%>%summarise(sum(Emissions))
 names(Baltimore.SubTotals) <- c("type", "year", "TotEmissions")
