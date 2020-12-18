@@ -37,7 +37,7 @@ VehicleCodes <- SCC$SCC[Vehicle]
 NEI.Vehicle <- filter(NEI, (SCC %in% VehicleCodes & fips == "24510") )
 
 ## Using dplyr capabilities, we will sum all values of Emissions per year and
-## store them on a new variable, table data frame called Tot_Emis_CoalComb
+## store them on a new variable, table data frame called Tot_Emis_Vehicle
 
 Tot_Emis_Vehicle <- NEI.Vehicle %>% group_by(year)%>%summarise(sum(Emissions))
 names(Tot_Emis_Vehicle) <- c("year", "TotEmissions")
