@@ -55,7 +55,7 @@ g <- ggplot(data = Tot_Emis_Vehicle, aes(factor(year),
 ## And now we will add layers to print the graphic
 
 g + geom_col(fill = 2:5) + ## Columns graphics
-        labs(title = "Emissions from motor vehicle in Baltimore City?") + 
+        labs(title = "Emissions from motor vehicle in Baltimore City") + 
         labs(x = "Years", y = "Emissions in Tons")
 
 ## close png device
